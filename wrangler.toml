@@ -1,0 +1,13 @@
+name = "user-worker"
+main = "build/worker/shim.mjs"
+compatibility_date = "2022-01-20"
+
+kv_namespaces = [
+    { binding = "users", id = "ccfe147ec1fc4d5db9a08a9153cc433c", preview_id = "0feda1ef60264505ba687dcbfed0b453" },
+]
+
+[vars]
+WORKERS_RS_VERSION = "0.0.11"
+
+[build]
+command = "cargo install -q worker-build --version 0.0.7 && worker-build --release"
